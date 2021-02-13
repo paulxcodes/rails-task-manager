@@ -1,7 +1,10 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form', task: @task %>
+
+<div class="complete">
+  <%= link_to 'Complete this task', tasks_path %>
+</div>
+
+<div class='return' >
+  <%= link_to '↩ Return to list', tasks_path %>
+</div>
+
